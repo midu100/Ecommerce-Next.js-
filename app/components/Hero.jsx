@@ -7,17 +7,20 @@ import Link from "next/link";
 const Hero = () => {
 
   const images = [
-    "/hero1.jpg",
+    "/hero6.jpg",
     "/hero2.jpg",
-    "/hero3.jpg",
+    "/hero1.jpg",
+    "/hero8.jpg",
   ];
 
-  const [current, setCurrent] = useState(0);
+  const [index, setIndex] = useState(0);
 
-  // Auto change image every 3 seconds
   useEffect(() => {
     const interval = setInterval(() => {
-      setCurrent((prev) => (prev + 1) % images.length);
+      setIndex((prev) => {
+        if (prev === images.length - 1) return 0;
+        return prev + 1;
+      });
     }, 3000);
 
     return () => clearInterval(interval);
@@ -30,40 +33,43 @@ const Hero = () => {
           
           <div className="flex relative h-[500px]">
 
-            {/* Left Image */}
+            {/* Left (changing) */}
             <div className="w-1/3 relative">
               <Image
-                src={images[current]}
+                src={images[index]}
                 alt="hero"
                 fill
                 className="object-cover"
               />
             </div>
 
-            {/* Middle Image */}
+            {/* Middle (fixed) */}
             <div className="w-1/3 relative">
               <Image
-                src={images[(current + 1) % images.length]}
+                src="/hero7.jpg"
                 alt="hero"
                 fill
                 className="object-cover"
               />
-              
-              {/* Button */}
+
               <div className="absolute inset-0 flex items-center justify-center">
                 <Link
                   href="/shop"
-                  className="border border-white text-white px-8 py-3 rounded-full backdrop-blur-md"
+                  className="border border-white text-white px-8 py-3 rounded-full"
                 >
                   Shop All
                 </Link>
               </div>
             </div>
 
-            {/* Right Image */}
+            {/* Right (changing) */}
             <div className="w-1/3 relative">
               <Image
-                src={images[(current + 2) % images.length]}
+                src={
+                  index === images.length - 1
+                    ? images[0]
+                    : images[index + 1]
+                }
                 alt="hero"
                 fill
                 className="object-cover"
