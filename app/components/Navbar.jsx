@@ -1,6 +1,5 @@
 import Image from 'next/image'
 import React from 'react'
-import logo from '../../public/PP_logo_2.avif'
 import Link from 'next/link'
 import { FaUser, FaSearch, FaShoppingCart } from "react-icons/fa";
 
@@ -44,7 +43,7 @@ const Navbar = () => {
                     <ul className='flex items-center gap-[25px] text-white'>
                         {
                             navItem.map((item,i)=>(
-                                <li><Link href={item.path}>{item.Name}</Link></li>
+                                <li key={i}><Link href={item.path}>{item.Name}</Link></li>
                             ))
                         }
                         
