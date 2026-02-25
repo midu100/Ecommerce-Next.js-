@@ -7,41 +7,41 @@ const Footer = () => {
     <>
       <footer className="bg-black text-white mt-16">
 
-        <div className="container py-[60px]">
+        <div className="container py-[40px] sm:py-[50px] lg:py-[60px]">
 
           {/* Top Links */}
-          <div className="flex justify-center gap-[30px] text-[14px] mb-[50px]">
-            <Link href="#" className="text-[14px] font-sans font-medium">Contact Information</Link>
-            <Link href="#" className="text-[14px] font-sans font-medium">Privacy Policy</Link>
-            <Link href="#" className="text-[14px] font-sans font-medium">Refund Policy</Link>
-            <Link href="#" className="text-[14px] font-sans font-medium">Shipping Policy</Link>
-            <Link href="#" className="text-[14px] font-sans font-medium">Terms of Service</Link>
-            <Link href="#" className="text-[14px] font-sans font-medium">Shop Locator</Link>
+          <div className="flex flex-wrap justify-center gap-[15px] sm:gap-[25px] lg:gap-[30px] text-[13px] sm:text-[14px] mb-[40px] lg:mb-[50px] text-center">
+            <Link href="#" className="font-sans font-medium">Contact Information</Link>
+            <Link href="#" className="font-sans font-medium">Privacy Policy</Link>
+            <Link href="#" className="font-sans font-medium">Refund Policy</Link>
+            <Link href="#" className="font-sans font-medium">Shipping Policy</Link>
+            <Link href="#" className="font-sans font-medium">Terms of Service</Link>
+            <Link href="#" className="font-sans font-medium">Shop Locator</Link>
           </div>
 
           {/* Middle Section */}
-          <div className="flex justify-between items-center">
+          <div className="flex flex-col md:flex-row justify-between items-center gap-[30px]">
 
             {/* Subscribe */}
-            <div>
-              <h3 className="text-[22px] mb-[20px]">
+            <div className="w-full md:w-auto text-center md:text-left">
+              <h3 className="text-[18px] sm:text-[20px] lg:text-[22px] mb-[15px] lg:mb-[20px]">
                 Subscribe to our emails
               </h3>
 
-              <div className="flex border border-gray-600 w-[350px]">
+              <div className="flex border border-gray-600 w-[90%] sm:w-[350px] mx-auto md:mx-0">
                 <input
                   type="email"
                   placeholder="Email"
-                  className="bg-transparent px-[15px] py-[10px] w-full outline-none"
+                  className="bg-transparent px-[15px] py-[10px] w-full outline-none text-[14px]"
                 />
-                <button className="px-[20px]">
+                <button className="px-[15px] sm:px-[20px]">
                   →
                 </button>
               </div>
             </div>
 
             {/* Social Icons */}
-            <div className="flex gap-[20px] text-[20px]">
+            <div className="flex gap-[20px] text-[18px] sm:text-[20px]">
               <Link href="#"><FaFacebookF /></Link>
               <Link href="#"><FaInstagram /></Link>
               <Link href="#"><FaTiktok /></Link>
@@ -53,9 +53,13 @@ const Footer = () => {
 
         {/* Bottom Part */}
         <div className="border-t border-gray-800">
-          <div className="container py-[20px] flex justify-between text-[14px] text-gray-400">
-            <p className="text-[16px] font-sans font-bold">© 2026 Kazi's Nation</p>
-            <p className="text-[16px] font-sans font-bold">Developed by Mridul</p>
+          <div className="container py-[15px] sm:py-[20px] flex flex-col sm:flex-row justify-between items-center text-[13px] sm:text-[14px] text-gray-400 gap-[10px]">
+            <p className="text-[14px] sm:text-[16px] font-sans font-bold text-center sm:text-left">
+              © 2026 Kazi's Nation
+            </p>
+            <p className="text-[14px] sm:text-[16px] font-sans font-bold text-center sm:text-right">
+              Developed by Mridul
+            </p>
           </div>
         </div>
 

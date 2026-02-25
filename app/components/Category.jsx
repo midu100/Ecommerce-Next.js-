@@ -6,10 +6,10 @@ import SingleCategory from "./common/SingleCategory";
 const Category = () => {
   return (
     <>
-      <section className="m-12">
+      <section className="my-8 md:my-12 px-4 md:px-0">
         <div className="container">
           
-          <div className="flex gap-[20px] justify-between">
+          <div className="flex flex-wrap md:flex-nowrap gap-[20px] justify-center md:justify-between">
 
             <SingleCategory src={'/cat1.jpg'} name={'Mens'} href={'/'}/>
             <SingleCategory src={'/hero8.jpg'} name={'Womens'} href={'/'}/>
