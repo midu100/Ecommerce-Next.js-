@@ -4,6 +4,7 @@ import Category from "./components/Category";
 import FeaturedProducts from "./components/FeaturedProducts";
 import NewArrival from "./components/NewArrival";
 import TopSelling from "./components/TopSelling";
+import ServiceHighlights from "./components/ServiceHighlights";
 
 
 export default function Home() {
@@ -14,6 +15,7 @@ export default function Home() {
        <FeaturedProducts />
        <NewArrival />
        <TopSelling />
+       <ServiceHighlights />
     </>
   );
 }
