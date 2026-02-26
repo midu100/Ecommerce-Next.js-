@@ -30,7 +30,7 @@ const Navbar = () => {
 
                     {/* Logo */}
                     <div className="logo w-55">
-                        <h1 className='text-[28px] text-white font-mono font-bold'>
+                        <h1 className='lg:text-[28px] text-[19px] text-white font-mono font-bold'>
                           Kazi's Nation
                         </h1>
                     </div>

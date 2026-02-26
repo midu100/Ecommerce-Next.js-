@@ -2,8 +2,11 @@ import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 import SingleCategory from "./common/SingleCategory";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 const Category = () => {
+  
   return (
     <>
       <section className="my-8 md:my-12 px-4 md:px-0">

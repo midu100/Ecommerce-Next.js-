@@ -17,7 +17,7 @@ const SingleCategory = ({ name, src, href }) => {
         <div className="absolute inset-0 flex items-center justify-center">
           <Link
             href={href}
-            className="border border-white backdrop-blur-xl font-bold text-[#fce2de] px-4 sm:px-5 md:px-6 py-1.5 sm:py-2 rounded-full text-[14px] sm:text-[15px] md:text-[16px]"
+            className="border border-white backdrop-blur-xl hover:bg-black duration-[.4s] font-bold text-[#fce2de] px-4 sm:px-5 md:px-6 py-1.5 sm:py-2 rounded-full text-[14px] sm:text-[15px] md:text-[16px]"
           >
             {name}
           </Link>

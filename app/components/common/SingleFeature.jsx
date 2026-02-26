@@ -1,12 +1,13 @@
 import Image from "next/image";
 import React from "react";
 
-const SingleFeature = ({name,src,price}) => {
+const SingleFeature = ({ name, src, price }) => {
   return (
-    <div>
-      <div className="w-[359px] h-[548px] bg-[#f1f0f0] rounded-xl shadow-md overflow-hidden group ">
+    <div className="w-full sm:w-1/2 lg:w-1/4 flex justify-center">
+      <div className="w-full max-w-[359px] h-auto bg-[#f1f0f0] rounded-xl shadow-md overflow-hidden group">
+
         {/* Image */}
-        <div className="relative w-full h-[470px] overflow-hidden">
+        <div className="relative w-full h-[320px] sm:h-[380px] lg:h-[470px] overflow-hidden">
           <Image
             src={src}
             alt="product"
@@ -24,11 +25,12 @@ const SingleFeature = ({name,src,price}) => {
 
         {/* Info */}
         <div className="text-center py-4 px-3">
-          <h3 className="text-[14px] font-medium mb-2">
+          <h3 className="text-[13px] sm:text-[14px] font-medium mb-2">
             {name}
           </h3>
           <p className="text-gray-600 text-sm">Tk {price}</p>
         </div>
+
       </div>
     </div>
   );

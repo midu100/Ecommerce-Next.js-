@@ -8,8 +8,8 @@ const Hero = () => {
 
   const images = [
     "/hero6.jpg",
-    "/hero2.jpg",
-    "/hero1.jpg",
+    "/p4.jpg",
+    "/p3.jpg",
     "/hero8.jpg",
   ];
 
@@ -53,7 +53,7 @@ const Hero = () => {
                 src="/hero7.jpg"
                 alt="hero"
                 fill
-                className="object-cover"
+                className="object-cover hidden md:block lg:block"
               />
 
               {/* Optional Video Version (Use instead of Image if needed) */}
@@ -63,7 +63,7 @@ const Hero = () => {
                 autoPlay
                 loop
                 muted
-                className="absolute inset-0 w-full h-full object-cover"
+                className="absolute inset-0 w-full h-full object-cover lg:hidden md:hidden block"
               />
              
 
