@@ -7,10 +7,8 @@ import Link from "next/link";
 const Hero = () => {
 
   const images = [
-    "/hero6.jpg",
     "/p4.jpg",
     "/p3.jpg",
-    "/hero8.jpg",
   ];
 
   const [index, setIndex] = useState(0);
